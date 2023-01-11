@@ -70,15 +70,20 @@ data() {
   </div>
 
 <div class="d-flex mt-4">
-      <label> Category </label>
+    <div>
+      <label class="m-2"> Category </label>
       <input type="text" placeholder="add a new item" v-model="name" />
-      <label> Amount </label>
+    </div>
+
+    <div>
+      <label class="m-2"> Amount </label>
       <input type="number" placeholder="amount" v-model.number="amount" />
-      <button @click="addItem">Add</button>
+    </div>
+      <button class="m-2" @click="addItem">Add</button>
 </div>
 
 <div class="d-flex mt-4">
-  <label> Search </label>
+  <label class="m-2"> Search </label>
   <input type="text" placeholder="Type here" v-model="searchTerm"/>
 </div>
 

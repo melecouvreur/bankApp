@@ -22,9 +22,11 @@ methods: {
 
 <template>
     <div class="col">
-        <div class="card card-body">
+        <div class="card card-body shadow border-0">
             <h4> {{ title }}  </h4>
-            <h5> $ {{ amount }} </h5>
+            <h5 
+            :class="{'text-success': amount > 0, 'text-danger': amount < 0}"
+            >$ {{ amount }} </h5>
         </div>
     </div>
 </template>

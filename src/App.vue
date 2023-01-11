@@ -72,7 +72,7 @@ data() {
 <div class="d-flex mt-4">
       <label> Category </label>
       <input type="text" placeholder="add a new item" v-model="name" />
-      <label> Amount  </label>
+      <label> Amount </label>
       <input type="number" placeholder="amount" v-model.number="amount" />
       <button @click="addItem">Add</button>
 </div>
@@ -88,7 +88,11 @@ data() {
     :key="item.id"
     class="d-flex list-group-item justify-content-between align-items-center"> <!--can run loop on computed property-->
       <span> {{ item.name }}: </span>
-      <span> $ {{ item.amount }} </span>
+      <span
+      :class="{
+      'text-success': item.amount > 0,
+      'text-danger': item.amount <0 }"
+      >$ {{ item.amount }} </span>
     </li>
   </ul>
 </div>
